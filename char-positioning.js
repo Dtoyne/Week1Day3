@@ -38,3 +38,18 @@ function countLetters(str) {
 }
 
 console.log(countLetters(str));
+
+// Refactored with a ternary operator:
+
+var str = process.argv.slice(2).toString()
+
+function countLetters(str) {
+  var uniqueLetters = "";
+  var object = {};
+  for (var i in str) {
+    object.hasOwnProperty(str[i]) ? object[str[i]].push(i) : object[str[i]] = [i];
+  }
+  return object;
+}
+
+console.log(countLetters(str));
