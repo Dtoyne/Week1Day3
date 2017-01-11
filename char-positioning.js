@@ -1,4 +1,7 @@
-var str = process.argv.slice(2).toString().toLowerCase().split(",").join("");
+// When passing arguments through the command line, be sure to delimit the input with quotes:
+// This will allow the arguments (however many) to be passed through the program as one argument.
+
+var str = process.argv.slice(2).toString()
 
 function countLetters (str) {
   var uniqueLetters = "";
